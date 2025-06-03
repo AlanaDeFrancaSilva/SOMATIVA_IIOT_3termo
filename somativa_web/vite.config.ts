@@ -15,4 +15,14 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server:{
+    proxy: {
+      "/proxy-api": {
+        target: 'https://api.qubitro.com',
+        secure: false,
+        changeOrigin: true,
+        rewrite: (path)=> path.replace(/^\/proxy-api/,"")
+      }
+    }
+  },
 })

@@ -1,0 +1,12 @@
+// reset de alguns comandos do CSS padrão 
+
+*{ // * (asterisco) Esse seletor é o "universal", ou seja, ele aplica a regra a todos os elementos da página.
+    margin: 0; // Define que todos os elementos terão a margem (espaço fora de sua borda) igual a 0
+    padding: 0; // Define que todos os elementos terão o preenchimento interno (o espaço entre o conteúdo do elemento e sua borda) igual a 0
+    box-sizing: border-box; // Muda o modelo de caixa (box model) para o "border-box". Isso significa que, ao definir a largura (width) ou altura (height) de um elemento, o padding e a borda são incluídos nesses valores
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}

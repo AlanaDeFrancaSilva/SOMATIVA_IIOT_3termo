@@ -1,0 +1,14 @@
+@use "variables.scss";
+@use "reset.scss";
+
+// importando font do site - https://fonts.google.com/
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+// Mantém o fundo no app Vue
+#app {
+    min-height: 100vh;
+    font-family: 'Dosis';
+    text-align: center; //Centraliza tudo
+    padding: 2rem //adiciona espaçamento interno
+    
+}

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Sensores from '@/views/Sensores.vue'
+import Manute from '@/views/Manute.vue'
 
 
 const router = createRouter({
@@ -9,6 +10,12 @@ const router = createRouter({
       component: Sensores,
       path: '/', //Pagina raiz, a primeira a aparecer
       name: 'sensores' 
+    },
+
+    {
+      component: Manute,
+      path: '/manute',
+      name: 'manute'
     },
   ],
 })
