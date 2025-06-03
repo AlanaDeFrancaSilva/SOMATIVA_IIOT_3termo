@@ -2,8 +2,9 @@
   <div>
     <Header />
 
-    <router-link to="/manute">Manutenção</router-link>
+    <router-link to="/manute" class="link-manute">Manutenção</router-link>
 
+    <div class="sensores">
     <section class="sensor-container">
       <div>
         <h3>Tanque</h3>
@@ -17,9 +18,10 @@
         <p>{{ dados[`plant_${n}_HUM`] }}%</p>
       </div>
     </section>
+    </div>
 
     <!-- Exibição da data/hora da última leitura -->
-    <p v-if="dados.time">Última atualização: {{ dados.time.toLocaleString() }}</p>
+    <p v-if="dados.time" class="data-atualizacao">Última atualização: {{ dados.time.toLocaleString() }}</p>
   </div>
 </template>
 
@@ -35,7 +37,7 @@ export default {
 
   data() {
     return {
-      dados: new Dados()
+      dados: new Dados() //Armazena dados do Qubitro
     };
   },
 
@@ -80,6 +82,11 @@ export default {
 </script>
 
 <style scoped>
+.sensores{
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente*/
+  width: 100%; /* Garante que ocupe toda a largura disponível */
+}
 .sensor-container {
   display: flex;
   gap: 20px; /* espaço entre os sensores */
@@ -88,8 +95,19 @@ export default {
 .sensor-container > div {
   border: 1px solid #ccc;
   padding: 10px;
-  width: 150px; /* ajuste conforme necessário */
+  width: 150px;
   text-align: center;
+}
+.link-manute {
+  display: block; /* Garante que margin-top e margin-bottom funcionem */
+  margin-top: 20px; /* Aumenta o espaçamento superior */
+  margin-bottom: 20px; /* Aumenta o espaçamento inferior */
+  text-align: center; /* Centraliza*/
+}
+.data-atualizacao {
+  margin-top: 20px; /* Aumenta o espaçamento superior */
+  margin-bottom: 20px; /* Aumenta o espaçamento inferior */
+  text-align: center; /* Centraliza */
 }
 </style>
 
