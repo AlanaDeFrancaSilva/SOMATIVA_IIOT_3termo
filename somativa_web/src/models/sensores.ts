@@ -14,5 +14,12 @@ export class Dados {
   tanque_PH: number = 0;
   tanque_TEMP: number = 0;
 
-  time: Date = new Date(); // ou usar Date se quiser trabalhar com objetos de data
+  time: Date = new Date();
+}
+
+export class Manutencao {
+  id: number = 0;
+  equipamento: string = '';
+  data: Date = new Date();
+  descricao: string = ''
 }
