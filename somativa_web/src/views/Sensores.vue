@@ -33,7 +33,7 @@
 </template>
 
 
-<script>
+<script> //teste
 import Header from '@/components/Header.vue';
 import Navega from '@/components/Navega.vue';
 import { Dados } from '@/models/sensores';
