@@ -3,8 +3,6 @@
     <Header />
     <Navega />
 
-    <!--<router-link to="/manute" class="link-manute">Manutenção</router-link> -->
-
     <div class="sensores">
     <section class="sensor-container">
       <div>
@@ -133,10 +131,13 @@ export default {
   flex-wrap: wrap; /* permite quebrar linha se não couber tudo */
 }
 .sensor-container > div {
-  border: 1px solid #ccc;
+  border: 1px solid #eee; /* Cor de borda leve, igual ao gráfico */
   padding: 10px;
   width: 150px;
   text-align: center;
+  border-radius: 8px; /* Cantos arredondados, igual ao gráfico */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave, igual ao gráfico */
+  margin-bottom: 20px;
 }
 .link-manute {
   display: block; /* Garante que margin-top e margin-bottom funcionem */
